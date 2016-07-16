@@ -34,23 +34,23 @@ public class RadioCarro implements Radio {
     }
     /*cambia de encendido a apagado y viceversa*/
     @Override
-    public void setEncendido(){
-        if (estado==true){
-            estado=false;
+    public void setEncendido(boolean state){
+        if (state==true){
+            this.estado=false;
         }
         else{
-            estado=true;
+            this.estado=true;
         }
     }
     
     /*cambia de frecuencia de AM a FM y viceversa*/
     @Override
-    public void setFrecuencia(){
-        if (frecuencia==true){
-            frecuencia=false;
+    public void setFrecuencia(boolean frecuency){
+        if (frecuency==true){
+            this.frecuencia=false;
         }
         else{
-            frecuencia=true;
+            this.frecuencia=true;
         }
     }
     

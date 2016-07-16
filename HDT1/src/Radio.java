@@ -9,8 +9,8 @@
 */
 public interface Radio {
     
-    void setEncendido();
-    void setFrecuencia();
+    void setEncendido(boolean state);
+    void setFrecuencia(boolean frecuency);
     void setEmisora(double nuevaEmisora);
     void saveEmisora(int btn, double emisora);
     double selectEmisora(int btn);

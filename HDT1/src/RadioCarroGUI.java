@@ -15,7 +15,6 @@ public class RadioCarroGUI extends javax.swing.JFrame {
         initComponents();
         jLabel1.setVisible(false);
         jLabel2.setVisible(false);
-        jButton2.setVisible(false);
         jButton3.setVisible(false);
         jButton4.setVisible(false);
         jButton5.setVisible(false);
@@ -402,12 +401,11 @@ public class RadioCarroGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         estado1 = nuevo.getEncendido();
-        nuevo.setEncendido();
-        if(estado1==true){
+        nuevo.setEncendido(estado1);
+        if(nuevo.getEncendido()==true){
             jLabel1.setVisible(true);
             jLabel2.setVisible(true);
             jLabel3.setVisible(true);
-            jButton2.setVisible(true);
             jButton3.setVisible(true);
             jButton4.setVisible(true);
             jButton5.setVisible(true);
@@ -427,7 +425,8 @@ public class RadioCarroGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        nuevo.setFrecuencia();
+        boolean frecuencia1=nuevo.getFrecuencia();
+        nuevo.setFrecuencia(frecuencia1);
         if (nuevo.getFrecuencia()==true){
             jLabel3.setText("FM");
             nuevo.setEmisora(87.9);
