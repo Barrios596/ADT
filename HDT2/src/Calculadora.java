@@ -9,12 +9,49 @@
 */
 public class Calculadora {
     
+    private String caracter;
+    float operando;
+    
     public Calculadora(){
     }
     
-    public float calcular(String text, Stack<Object> pile){
+    public float calcular(String text, Stack<Float> pile){
         float res=0;
-        
+        float operando1;
+        float operando2;
+        for (int i=0;i<text.length();i++){
+            caracter=text.substring(i, i+1);
+            try{
+              operando = Float.valueOf(caracter);
+              pile.push(operando);
+            }
+            catch (NumberFormatException e){
+                if (caracter.equals("+")){
+                    operando1=pile.pop();
+                    operando2=pile.pop();
+                    res=operando1+operando2;
+                    pile.push(res);
+                }
+                if (caracter.equals("-")){
+                    operando1=pile.pop();
+                    operando2=pile.pop();
+                    res=operando2-operando1;
+                    pile.push(res);
+                }
+                if (caracter.equals("*")){
+                    operando1=pile.pop();
+                    operando2=pile.pop();
+                    res=operando1*operando2;
+                    pile.push(res);
+                }
+                if (caracter.equals("/")){
+                    operando1=pile.pop();
+                    operando2=pile.pop();
+                    res=operando2/operando1;
+                    pile.push(res);
+                }
+            }
+        }
         return res;
     }
 }
