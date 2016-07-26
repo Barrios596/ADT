@@ -15,7 +15,7 @@ public class Main {
         float resultado;
         Stack<Float> pila =new StackVector<Float>();  //Se crea un Stack de floats 
         Calculadora calc = new Calculadora();   /*en la siguiente linea hay que ingresar la dirección completa del archivo de texto*/
-        FileReader fr = new FileReader("C:\\Users\\Rodrigo\\Documents\\2do ciclo 2016\\ADT\\HDT2\\src\\datos.txt");
+        FileReader fr = new FileReader("C:\\Users\\JoiceAndrea\\OneDrive\\Documents\\4to Semestre\\ADT\\HT2\\ADT-master\\HDT2\\src\\datos.txt");
         BufferedReader br = new BufferedReader(fr); //BufferedReader es un objeto que puede leer archivos de texto y guardarlos en Strings
         String linea = br.readLine();   //se lee la primera linea del archivo de texto
         //Se repite un ciclo hasta que ya no hayan más lineas que leer

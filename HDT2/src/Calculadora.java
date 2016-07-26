@@ -47,9 +47,16 @@ public class Calculadora {
                 if (caracter.equals("/")){
                     operando1=pile.pop();
                     operando2=pile.pop();
-                    res=operando2/operando1;
-                    pile.push(res);
+                    if (operando2==0){
+                        System.out.println("NO PUEDE DIVIDIR ENTRE CERO");
+                    }
+                    else {
+                        res=operando2/operando1;
+                        pile.push(res);
+                    }
+                    
                 }
+                    
             }
         }
         return res;
